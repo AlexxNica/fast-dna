@@ -45,7 +45,7 @@ describe("The return value of manageJss", (): void => {
 });
 
 describe("The higher-order component", (): void => {
-
+    
     test("should return a different component when called twice with the same component", (): void => {
         expect(manageJss()(SimpleComponent)).not.toBe(manageJss()(SimpleComponent));
     });
@@ -70,7 +70,7 @@ describe("The higher-order component", (): void => {
         expect(Component["stylesheetManager"].sheets.length).toBe(expected);
     });
     // tslint:disable-next-line
-    test("should share the static portion of a stylesheet and not share the dynamic portion of a stylesheeets across component instances", (): void => {
+    test("should share the static portion of a stylesheet and not share the dynamic portion of a stylesheets across component instances", (): void => {
         const renderers: ShallowRenderer[] = [
             new ShallowRenderer(),
             new ShallowRenderer()
